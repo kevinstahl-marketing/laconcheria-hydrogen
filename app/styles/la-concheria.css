@@ -1,0 +1,208 @@
+
+/* LA CONCHERIA — PANADERÍA STOREFRONT */
+
+.lc-storefront {
+  --lc-paper: #f6ead4;
+  --lc-red: #a73728;
+  --lc-green: #2d6654;
+  --lc-cacao: #453025;
+
+  background: var(--lc-paper);
+  color: var(--lc-cacao);
+  min-height: 100vh;
+}
+
+.lc-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+  position: relative;
+}
+
+.lc-hero__eyebrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  background: var(--lc-red);
+  color: #fff7e8;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  z-index: 1;
+}
+
+.lc-hero__content {
+  padding: 120px 8% 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lc-hero__overline {
+  color: var(--lc-red);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lc-hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 24px 0;
+}
+
+.lc-hero h1 em {
+  color: var(--lc-red);
+  font-weight: 400;
+}
+
+.lc-hero__description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 430px;
+  margin-bottom: 32px;
+}
+
+.lc-hero__image {
+  overflow: hidden;
+  background: #dfc49d;
+  min-height: 400px;
+}
+
+.lc-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.lc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 16px 28px;
+  background: var(--lc-red);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.lc-button:hover {
+  background: var(--lc-green);
+  transform: translateY(-2px);
+}
+
+.lc-marquee {
+  background: var(--lc-green);
+  color: #fff7e8;
+  text-align: center;
+  padding: 18px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+}
+
+.lc-products {
+  padding: 100px 6%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.lc-section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.lc-section-heading > p {
+  color: var(--lc-red);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.lc-section-heading h2,
+.lc-story h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin: 12px 0;
+}
+
+.lc-products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.lc-products__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.lc-story {
+  padding: 110px 24px;
+  background: var(--lc-red);
+  color: #fff7e8;
+  text-align: center;
+}
+
+.lc-story > p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.lc-story__description {
+  max-width: 540px;
+  margin: 24px auto;
+  line-height: 1.8;
+}
+
+.lc-story a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+@media (max-width: 900px) {
+  .lc-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .lc-hero__content {
+    padding: 110px 7% 55px;
+  }
+
+  .lc-hero__image {
+    min-height: 350px;
+  }
+
+  .lc-products__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .lc-hero h1 {
+    font-size: 3.3rem;
+  }
+
+  .lc-products {
+    padding: 65px 5%;
+  }
+
+  .lc-products__grid {
+    gap: 14px;
+  }
+
+  .lc-story {
+    padding: 75px 20px;
+  }
+}
